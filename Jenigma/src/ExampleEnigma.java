@@ -1,3 +1,4 @@
+
 /*
  *  Copyright 2003-2008 Tom Castle (tc33.org)
  *  Licensed under GNU General Public License
@@ -23,32 +24,38 @@ import components.Reflector;
 import components.Rotor;
 
 /**
- * This version of the Enigma isn't really suitable for any serious use however 
+ * This version of the Enigma isn't really suitable for any serious use however
  * it may have some demonstration use to get started quickly.
  */
 public class ExampleEnigma extends Enigma {
 
-	private final static Rotor[] rotors = new Rotor[]{Rotor.ROTOR_I, Rotor.ROTOR_II, Rotor.ROTOR_III};
+	private final static Rotor[] rotors = new Rotor[] { Rotor.ROTOR_I, Rotor.ROTOR_II, Rotor.ROTOR_III };
 	private final static Reflector reflector = Reflector.REFLECTOR_B;
-	
+
 	/**
-	 * This constructor creates a JEnigma machine using Rotors I, II and III, 
-	 * an empty plugboard and reflector B. The char parameters are the starting 
+	 * This constructor creates a JEnigma machine using Rotors I, II and III, an
+	 * empty plugboard and reflector B. The char parameters are the starting
 	 * positions for the rotors - essentially the key.
-	 * @param pos1 A char 'A' to 'Z' which gives the starting position of the first rotor.
-	 * @param pos2 A char 'A' to 'Z' which gives the starting position of the second rotor.
-	 * @param pos3 A char 'A' to 'Z' which gives the starting position of the third rotor.
+	 * 
+	 * @param pos1
+	 *            A char 'A' to 'Z' which gives the starting position of the
+	 *            first rotor.
+	 * @param pos2
+	 *            A char 'A' to 'Z' which gives the starting position of the
+	 *            second rotor.
+	 * @param pos3
+	 *            A char 'A' to 'Z' which gives the starting position of the
+	 *            third rotor.
 	 */
 	public ExampleEnigma(char pos1, char pos2, char pos3) {
-		super(rotors, new char[]{pos1, pos2, pos3}, new Plugboard(), reflector);
+		super(rotors, new char[] { pos1, pos2, pos3 }, new Plugboard(), reflector);
 	}
-	
+
 	/**
 	 * Use this constructor if you don't even care what the rotor settings are.
 	 */
 	public ExampleEnigma() {
-		super(rotors, new char[]{'A', 'A', 'A'}, new Plugboard(), reflector);
+		super(rotors, new char[] { 'A', 'A', 'A' }, new Plugboard(), reflector);
 	}
-
 
 }

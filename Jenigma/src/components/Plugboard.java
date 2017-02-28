@@ -28,57 +28,59 @@ import java.util.*;
 public class Plugboard extends Permutator {
 
 	private char[] cables = new char[26];
-    
-    /**
-     * Constructor. This is commented out as it's safer to force users to use 
-     * the addCable method.
-     */
-    /*public Plugboard(char[] cables) {
-        this.cables = cables;
-    }*/
-    
-    /**
-     * Create an empty plugboard to add cables to later.
-     */
-    public Plugboard() {}
-    
-    /**
-     * Add a cable to the plugboard.
-     * @param cableEnd1
-     * @param cableEnd2
-     */
+
+	/**
+	 * Constructor. This is commented out as it's safer to force users to use
+	 * the addCable method.
+	 */
+	/*
+	 * public Plugboard(char[] cables) { this.cables = cables; }
+	 */
+
+	/**
+	 * Create an empty plugboard to add cables to later.
+	 */
+	public Plugboard() {
+	}
+
+	/**
+	 * Add a cable to the plugboard.
+	 * 
+	 * @param cableEnd1
+	 * @param cableEnd2
+	 */
 	public void addCable(char cableEnd1, char cableEnd2) {
 		cableEnd1 = Character.toUpperCase(cableEnd1);
 		cableEnd2 = Character.toUpperCase(cableEnd2);
-		
-		cables[cableEnd1-65] = cableEnd2;
-		cables[cableEnd2-65] = cableEnd1;
+
+		cables[cableEnd1 - 65] = cableEnd2;
+		cables[cableEnd2 - 65] = cableEnd1;
 	}
-	
+
 	public char getSwappedChar(char cableEnd) {
 		cableEnd = Character.toUpperCase(cableEnd);
-		char otherEnd = cables[cableEnd-65];
+		char otherEnd = cables[cableEnd - 65];
 		if (otherEnd == '\u0000')
 			otherEnd = cableEnd;
-		
+
 		return otherEnd;
 	}
-	
+
 	public void clearCables() {
 		Arrays.fill(cables, '\u0000');
 	}
-    
-	/*public void setCables(char[] cables) {
-		this.cables = cables;
-	}*/
-	
-    /**
-     * Prints the whole key for the plugboard - for testing purposes.
-     */
-    public void printKey() {
-        System.out.println("PT................CT");
-        for (int i=0; i < cables.length; i++){
-            System.out.println((char)(i+65) + ".................." + cables[i]);
-        }
-    }
+
+	/*
+	 * public void setCables(char[] cables) { this.cables = cables; }
+	 */
+
+	/**
+	 * Prints the whole key for the plugboard - for testing purposes.
+	 */
+	public void printKey() {
+		System.out.println("PT................CT");
+		for (int i = 0; i < cables.length; i++) {
+			System.out.println((char) (i + 65) + ".................." + cables[i]);
+		}
+	}
 }

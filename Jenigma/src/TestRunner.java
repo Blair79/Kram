@@ -18,35 +18,32 @@
  *  along with JEnigma.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 import components.*;
 
 /**
  * Just some rudimentary tests, these will need much more work later.
  * 
  * Test #1 is likely to fail any time the configuration is changed because it
- * has a hardcoded expected ciphertext. Test #2 is more useful as it checks you 
+ * has a hardcoded expected ciphertext. Test #2 is more useful as it checks you
  * can decrypt back to the same plaintext.
  */
 public class TestRunner {
-	
+
 	public static void main(String[] args) {
 
-		Enigma enigma = new Enigma(new Rotor[]{Rotor.ROTOR_I, Rotor.ROTOR_II, Rotor.ROTOR_III}, 
-								   new char[]{'A','A','A'},
-								   new Plugboard(),
-								   Reflector.REFLECTOR_B);
-		
+		Enigma enigma = new Enigma(new Rotor[] { Rotor.ROTOR_I, Rotor.ROTOR_II, Rotor.ROTOR_III },
+				new char[] { 'A', 'A', 'A' }, new Plugboard(), Reflector.REFLECTOR_B);
+
 		String expectedPlaintext = "HELLOCRYPTOWORLD";
 		String expectedCiphertext = "EAEEZOWWLRLPIHQO";
-		
+
 		String ciphertext = enigma.execute(expectedPlaintext);
-		enigma.setRotorPositions(new char[]{'A','A','A'});
+		enigma.setRotorPositions(new char[] { 'A', 'A', 'A' });
 		String plaintext = enigma.execute(ciphertext);
-	
+
 		boolean test1 = ciphertext.equals(expectedCiphertext);
 		boolean test2 = plaintext.equals(expectedPlaintext);
-		
+
 		System.out.println("TEST #1: " + (test1 ? "PASSED" : "FAILED"));
 		System.out.println("TEST #2: " + (test2 ? "PASSED" : "FAILED"));
 		System.out.println("-------------------");

@@ -25,6 +25,7 @@ package components;
  */
 public abstract class Permutator {
 
-	//TODO Need to implement this from generic components of Rotor, Reflector and Plugboard.
-	
+	// TODO Need to implement this from generic components of Rotor, Reflector
+	// and Plugboard.
+
 }
