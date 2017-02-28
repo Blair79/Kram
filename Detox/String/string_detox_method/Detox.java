@@ -12,8 +12,11 @@ import javax.swing.JTextField;
 public class Detox {
 
 	private JFrame frmReplace;
-	public static JTextField textField=new JTextField("");
-	private static String[][] UMLAUT_REPLACEMENTS = { { new String("Ä"), "Ae" }, { new String("Ü"), "Ue" }, { new String("Ö"), "Oe" }, { new String("ä"), "ae" }, { new String("ü"), "ue" }, { new String("ö"), "oe" }, { new String("ß"), "ss" } };
+	public static JTextField textField = new JTextField("");
+	private static String[][] UMLAUT_REPLACEMENTS = { { new String("Ä"), "Ae" }, { new String("Ü"), "Ue" },
+			{ new String("Ö"), "Oe" }, { new String("ä"), "ae" }, { new String("ü"), "ue" }, { new String("ö"), "oe" },
+			{ new String("ß"), "ss" } };
+
 	/**
 	 * Launch the application.
 	 */
@@ -36,21 +39,21 @@ public class Detox {
 	public Detox() {
 		initialize();
 	}
-	
-	public static void detoxing(){
+
+	public static void detoxing() {
 		String Str = textField.getText();
-		Str=replaceUmlaute(Str);
+		Str = replaceUmlaute(Str);
 		textField.setText(Str.replace(' ', '_').toLowerCase());
 	}
-	
+
 	public static String replaceUmlaute(String orig) {
-	    String result = orig;
+		String result = orig;
 
-	    for (int i = 0; i < UMLAUT_REPLACEMENTS.length; i++) {
-	        result = result.replace(UMLAUT_REPLACEMENTS[i][0], UMLAUT_REPLACEMENTS[i][1]);
-	    }
+		for (int i = 0; i < UMLAUT_REPLACEMENTS.length; i++) {
+			result = result.replace(UMLAUT_REPLACEMENTS[i][0], UMLAUT_REPLACEMENTS[i][1]);
+		}
 
-	    return result;
+		return result;
 	}
 
 	/**
@@ -69,11 +72,10 @@ public class Detox {
 				detoxing();
 			}
 		});
-		
-		
+
 		frmReplace.getContentPane().add(textField);
 		textField.setColumns(10);
-		
+
 		JButton btnNewButton = new JButton("ok");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -82,5 +84,5 @@ public class Detox {
 		});
 		frmReplace.getContentPane().add(btnNewButton);
 	}
-	
+
 }
