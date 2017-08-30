@@ -1,3 +1,4 @@
+package enigma;
 
 /*
  *  Copyright 2003-2008 Tom Castle (tc33.org)
@@ -40,10 +41,10 @@ public class Enigma {
 	 *            length as the rotors array and each char is the char that the
 	 *            rotor in that position should be set to.
 	 * @param plugboardCables
-	 *            This should be an array of the length of the alphabet, which
-	 *            lists pairings. It is vital that both ends of a cable are
-	 *            attached - that is, if the first element is 'D' then the 4th
-	 *            element must be 'A' so that A and D are swapped.
+	 *            This should be an array of the length of the alphabet, which lists
+	 *            pairings. It is vital that both ends of a cable are attached -
+	 *            that is, if the first element is 'D' then the 4th element must be
+	 *            'A' so that A and D are swapped.
 	 * @param reflector
 	 *            The reflector object to use.
 	 */
@@ -75,10 +76,10 @@ public class Enigma {
 	 *            length as the rotors array and each char is the char that the
 	 *            rotor in that position should be set to.
 	 * @param plugboardCables
-	 *            This should be an array of the length of the alphabet, which
-	 *            lists pairings. It is vital that both ends of a cable are
-	 *            attached - that is, if the first element is 'D' then the 4th
-	 *            element must be 'A' so that A and D are swapped.
+	 *            This should be an array of the length of the alphabet, which lists
+	 *            pairings. It is vital that both ends of a cable are attached -
+	 *            that is, if the first element is 'D' then the 4th element must be
+	 *            'A' so that A and D are swapped.
 	 * @param reflector
 	 *            The reflector object to use.
 	 */
@@ -91,8 +92,8 @@ public class Enigma {
 	}
 
 	/**
-	 * Encryption and decryption are performed in the same way in the Enigma.
-	 * This method should be used for both.
+	 * Encryption and decryption are performed in the same way in the Enigma. This
+	 * method should be used for both.
 	 */
 	public String execute(String input) {
 		// Perform operation.

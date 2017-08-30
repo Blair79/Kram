@@ -52,8 +52,8 @@ public class Rotor extends Permutator {
 	private char position = 'A';
 
 	/**
-	 * Constructor for rotor, taking parameters to show how to encrypt when set
-	 * at position 'A'.
+	 * Constructor for rotor, taking parameters to show how to encrypt when set at
+	 * position 'A'.
 	 */
 	public Rotor(char[] permutation) {
 		this.permutation = permutation;

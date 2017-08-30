@@ -30,8 +30,8 @@ public class Plugboard extends Permutator {
 	private char[] cables = new char[26];
 
 	/**
-	 * Constructor. This is commented out as it's safer to force users to use
-	 * the addCable method.
+	 * Constructor. This is commented out as it's safer to force users to use the
+	 * addCable method.
 	 */
 	/*
 	 * public Plugboard(char[] cables) { this.cables = cables; }

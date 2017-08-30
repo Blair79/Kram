@@ -1,3 +1,4 @@
+package enigma;
 
 /*
  *  Copyright 2003-2008 Tom Castle (tc33.org)
@@ -38,14 +39,14 @@ public class ExampleEnigma extends Enigma {
 	 * positions for the rotors - essentially the key.
 	 * 
 	 * @param pos1
-	 *            A char 'A' to 'Z' which gives the starting position of the
-	 *            first rotor.
+	 *            A char 'A' to 'Z' which gives the starting position of the first
+	 *            rotor.
 	 * @param pos2
-	 *            A char 'A' to 'Z' which gives the starting position of the
-	 *            second rotor.
+	 *            A char 'A' to 'Z' which gives the starting position of the second
+	 *            rotor.
 	 * @param pos3
-	 *            A char 'A' to 'Z' which gives the starting position of the
-	 *            third rotor.
+	 *            A char 'A' to 'Z' which gives the starting position of the third
+	 *            rotor.
 	 */
 	public ExampleEnigma(char pos1, char pos2, char pos3) {
 		super(rotors, new char[] { pos1, pos2, pos3 }, new Plugboard(), reflector);

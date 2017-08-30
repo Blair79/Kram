@@ -1,3 +1,4 @@
+package enigma;
 
 /*
  *  Copyright 2003-2008 Tom Castle (tc33.org)
