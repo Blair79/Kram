@@ -1,5 +1,3 @@
-import java.util.Vector;
-
 public class Primzahlen {
 
 	public static void main(String[] args) {
